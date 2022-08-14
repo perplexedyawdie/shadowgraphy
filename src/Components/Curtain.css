@@ -1,0 +1,75 @@
+.curtain {
+    border-radius: 20px;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+    position: relative;
+    outline: none;
+}
+
+.curtain_wrapper {
+    width: 100%;
+    height: 100%
+}
+
+.curtain_panel {
+    background-color: white;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: 99;
+    transition: all 1s ease-out;
+}
+
+.curtain_panel_left {
+    background: linear-gradient(90deg, rgba(153,10,77,1) 12%, rgba(198,12,99,1) 29%, rgba(211,13,106,1) 47%, rgba(228,49,133,1) 64%, rgba(236,65,145,1) 76%, rgba(244,82,158,1) 88%);
+    left: 0;
+    right: 50%;
+}
+
+.curtain_panel_right {
+    background: linear-gradient(270deg, rgba(153,10,77,1) 12%, rgba(198,12,99,1) 29%, rgba(211,13,106,1) 47%, rgba(228,49,133,1) 64%, rgba(236,65,145,1) 76%, rgba(244,82,158,1) 88%);
+    left: 50%;
+    right: 0;
+}
+
+.curtain_content {
+    /* background-color: rgba(153,10,77,1); */
+    position: absolute;
+    z-index: 90;
+    width: 100%;
+    height: 100%;
+}
+
+.curtain_trigger_box {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 100;
+    opacity: 0;
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+.reveal_left {
+    transform: translateX(-100%);
+}
+
+.reveal_right {
+    transform: translateX(100%);
+}
+
+.hide {
+    display: none
+}
+
+.forbidden {
+    box-shadow:  0px 0px 3px 4px rgba(245,3,3,1);
+    transition: all 0.1s linear
+}

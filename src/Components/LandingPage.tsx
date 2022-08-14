@@ -1,6 +1,7 @@
 import React from 'react'
 import * as party from "party-js";
 import { useNavigate } from 'react-router-dom';
+import Spline from '@splinetool/react-spline';
 
 function LandingPage() {
     let navigate = useNavigate();
@@ -19,6 +20,8 @@ function LandingPage() {
                     <header>
                         <img className='m-auto' src='/assets/images/header.png' alt='Shadowgraphy' />
                     </header>
+                    <Spline
+                        scene="https://prod.spline.design/gpfP7d3WH2qi9HlV/scene.splinecode" />
                     <div>
                         <button
                             onClick={handleBtnClick}

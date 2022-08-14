@@ -23,13 +23,13 @@
 }
 
 .curtain_panel_left {
-    background: linear-gradient(90deg, rgba(153,10,77,1) 12%, rgba(198,12,99,1) 29%, rgba(211,13,106,1) 47%, rgba(228,49,133,1) 64%, rgba(236,65,145,1) 76%, rgba(244,82,158,1) 88%);
+    background: url("../../public/assets/images/curtain-l.jpg");
     left: 0;
     right: 50%;
 }
 
 .curtain_panel_right {
-    background: linear-gradient(270deg, rgba(153,10,77,1) 12%, rgba(198,12,99,1) 29%, rgba(211,13,106,1) 47%, rgba(228,49,133,1) 64%, rgba(236,65,145,1) 76%, rgba(244,82,158,1) 88%);
+    background: url("../../public/assets/images/curtain-r.jpg");
     left: 50%;
     right: 0;
 }

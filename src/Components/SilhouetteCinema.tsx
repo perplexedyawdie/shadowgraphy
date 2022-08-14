@@ -19,26 +19,24 @@ function SilhouetteCinema() {
     return (
         <div className="flex justify-center items-center h-screen w-full">
             <CurtainRevealBox>
-                <div className="h-full grid grid-cols-2 grid-rows-2 place-items-center">
+                <div className="h-full grid grid-cols-2 grid-rows-3 place-items-center">
                     <img
-                        className="col-start-1 col-end-3 row-start-1 row-end-3 w-1/2 md:w-1/4 z-30"
+                        className="col-start-1 col-end-3 row-start-1 row-end-4 w-1/2 md:w-1/4 z-30"
                         src={`${shadowTrick.overlayLoc}`}
                         alt={`${shadowTrick.alt}`} />
                     <img
-                        className="col-start-1 col-end-3 row-start-2 row-end-3 z-20"
+                        className="col-start-1 col-end-3 row-start-3 row-end-4 z-20 animate-bounce"
                         src='/assets/images/crowd.png'
                         alt="silhoutte of a crowd" />
                     <Webcam
                         audio={false}
                         width={width}
                         height={height}
-                        className="object-cover col-start-1 h-screen col-end-3 row-start-1 row-end-3 z-10"
+                        className="object-cover col-start-1 h-screen col-end-3 row-start-1 row-end-4 z-10"
                         screenshotFormat="image/jpeg"
                         videoConstraints={videoConstraints} />
                 </div>
             </CurtainRevealBox>
-
-
         </div>
     )
 }

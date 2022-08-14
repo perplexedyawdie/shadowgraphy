@@ -18,18 +18,18 @@ function SilhouetteCinema() {
     }
     return (
         <div className="flex justify-center items-center h-screen w-full">
-            <div className="grid grid-cols-1 grid-rows-1 place-items-center">
+            <div className="grid grid-cols-2 grid-rows-2 place-items-center">
+                <img
+                    className="col-start-1 col-end-3 row-start-1 row-end-3 w-1/2 z-20"
+                    src={`${shadowTrick.overlayLoc}`}
+                    alt={`${shadowTrick.alt}`} />
                 <Webcam
                     audio={false}
                     width={width}
                     height={height}
-                    className="col-start-2 col-end-3 row-start-2 row-end-3"
+                    className="col-start-1 col-end-3 row-start-1 row-end-3 z-10"
                     screenshotFormat="image/jpeg"
                     videoConstraints={videoConstraints} />
-                <img
-                    className="text-5xl col-start-2 col-end-3 row-start-2 row-end-3 w-1/2"
-                    src={`${shadowTrick.overlayLoc}`}
-                    alt={`${shadowTrick.alt}`} />
             </div>
 
         </div>

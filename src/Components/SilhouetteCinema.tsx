@@ -9,7 +9,13 @@ function SilhouetteCinema() {
     const { width, height } = useWindowSize();
     let params = useParams();
     let shadowTrick = shadowTricksData.find(st => st.id === parseInt(params.id!)) ?? shadowTricksData[0];
-    
+    let videoConstraints: MediaTrackConstraints = {
+        width,
+        height,
+        facingMode: {
+            ideal: "environment"
+        }
+    }
     return (
         <div className="flex justify-center items-center h-screen w-full">
             <div className="grid grid-cols-1 grid-rows-1 place-items-center">
@@ -18,7 +24,8 @@ function SilhouetteCinema() {
                     width={width}
                     height={height}
                     className="col-start-2 col-end-3 row-start-2 row-end-3"
-                    screenshotFormat="image/jpeg" />
+                    screenshotFormat="image/jpeg"
+                    videoConstraints={videoConstraints} />
                 <img
                     className="text-5xl col-start-2 col-end-3 row-start-2 row-end-3 w-1/2"
                     src={`${shadowTrick.overlayLoc}`}
